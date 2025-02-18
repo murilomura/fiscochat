@@ -1,3 +1,5 @@
+FiscoChat
+
 Thanks for downloading this template!
 
 Template Name: QuickStart
