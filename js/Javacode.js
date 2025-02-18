@@ -1,8 +1,25 @@
 var data= {
     chatinit:{
         title: ["Olá! Eu sou o seu assistente fiscal <span class='emoji'> &#128075;</span>","O que posso te ajudar?"],
-        options: ["Tributação Atualizada","Regra de Transição","Comparativo Tributário","movies"]
+        options: ["Tributação Atualizada","Regra de Transição","Comparativo Tributário"]
     },
+
+tributação:
+{
+    title:["Obrigado pela sua resposta, Por favor, selecione a UF Origem"],
+    options:['MG','SP','RJ','SC'],
+    url:{}
+},
+
+// tributação:
+// {
+//     title:["Obrigado pela sua resposta, Por favor, selecione a UF Destino"],
+//     options:['MG','SP','RJ','SC'],
+// },
+
+
+
+
 
 chat:{
 
@@ -135,15 +152,6 @@ AI:
    }
 },
 
-Trib:
-{
-    title:["Thanks for your response, Please Select Category"],
-    options:['Hollywood','Bollywood','Web Series','Others'],
-    url :{
-        
-    }
-},
-
 movies: 
 {
     title:["Thanks for your response, Please Select Category"],
@@ -268,7 +276,7 @@ var cbot= document.getElementById("messages");
 var len1= data.chatinit.title.length;
 
 function showChatBot(){
-    console.log(this.innerText);
+    // console.log(this.innerText);
     if(this.innerText=='Simular Chatbot'){
         document.getElementById('test').style.display='block';
         document.getElementById('init').innerText='Encerrar CHAT';
@@ -292,7 +300,7 @@ function initChat(){
 
 var j=0;
 function handleChat(){
-    console.log(j);
+    // console.log(j);
     var elm= document.createElement("p");
     elm.innerHTML= data.chatinit.title[j];
     elm.setAttribute("class","msg");
@@ -309,12 +317,13 @@ function showOptions(options){
         opt.setAttribute("class","opt");
         opt.addEventListener("click", handleOpt);
         cbot.appendChild(opt);
+        // console.log(opt);
         handleScroll();
     }
 }
 
 function handleOpt(){
-    console.log(this);
+    // console.log(this);
     var str= this.innerText;
     var textArr= str.split(" ");
     var findText= textArr[0];
@@ -328,7 +337,7 @@ function handleOpt(){
     elm.innerHTML= sp;
     cbot.appendChild(elm);
 
-    console.log(findText.toLowerCase());
+    // console.log(findText.toLowerCase());
     var tempObj= data[findText.toLowerCase()];
     handleResults(tempObj.title,tempObj.options,tempObj.url);
 }
@@ -354,14 +363,14 @@ function handleResults(title,options,url){
     }
 
     if(isObjectEmpty(url)==true){
-        console.log("having more options");
+        // console.log("having more options");
         setTimeout(function(){
             showOptions(options);
         },title.length*1000)
         
     }
     else{
-        console.log("end result");
+        // console.log("end result");
         setTimeout(function(){
             handleOptions(options,url);
         },title.length*1000)
@@ -383,8 +392,8 @@ function handleOptions(options,url){
         return JSON.stringify(url)=== "{}";
     }
 
-    console.log(isObjectEmpty(url));
-    console.log(url);
+    // console.log(isObjectEmpty(url));
+    // console.log(url);
     opt.innerHTML=inp;
     opt.setAttribute("class","opt link");
     cbot.appendChild(opt);
