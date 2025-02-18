@@ -12,13 +12,15 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito", sans-serif;
+  --nav-font: "Inter", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #3d4348; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #3e5055; /* Color for headings, subheadings and title throughout the website */
@@ -29,7 +31,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #313336;  /* The default color of the main navmenu links */
+  --nav-color: #313336; /* The default color of the main navmenu links */
   --nav-hover-color: #77b6ca; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -272,7 +274,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -311,11 +313,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -327,7 +329,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -360,7 +362,7 @@ h6 {
   }
 
   .navmenu .megamenu ul li a,
-  .navmenu .megamenu ul li:hover>a {
+  .navmenu .megamenu ul li:hover > a {
     padding: 10px 20px;
     font-size: 15px;
     color: var(--nav-dropdown-color);
@@ -372,7 +374,7 @@ h6 {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .megamenu:hover>ul {
+  .navmenu .megamenu:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -474,7 +476,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -501,7 +503,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -626,7 +628,7 @@ h6 {
   border-color: var(--accent-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
+.footer .footer-newsletter .newsletter-form input[type="email"] {
   border: 0;
   padding: 4px 10px;
   width: 100%;
@@ -634,11 +636,11 @@ h6 {
   color: var(--default-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+.footer .footer-newsletter .newsletter-form input[type="email"]:focus-visible {
   outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
+.footer .footer-newsletter .newsletter-form input[type="submit"] {
   border: 0;
   font-size: 16px;
   padding: 0 20px;
@@ -649,14 +651,15 @@ h6 {
   border-radius: 50px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+.footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -781,11 +784,11 @@ h6 {
   font-size: 14px;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -805,7 +808,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -1200,7 +1202,7 @@ section,
 /*--------------------------------------------------------------
 # Features Details Section
 --------------------------------------------------------------*/
-.features-details .features-item+.features-item {
+.features-details .features-item + .features-item {
   margin-top: 60px;
 }
 
@@ -1770,8 +1772,8 @@ section,
   }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -1782,19 +1784,19 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1803,7 +1805,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -1816,14 +1818,15 @@ section,
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
 .service-details .service-box h4 {
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
@@ -1872,7 +1875,8 @@ section,
   align-items: center;
   padding: 10px 0;
   transition: 0.3s;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .service-details .download-catalog a:first-child {
@@ -1940,9 +1944,6 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
-
-
-
 
 /*--------------------------------------------------------------
 # PGCHAT Section
@@ -2023,4 +2024,117 @@ section,
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.chat {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footers2 {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container2 {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+.msg {
+  background-color: #ecf0f1;
+  padding: 0px;
+  border-radius: 5px;
+  margin: 5px 0;
+  width: fit-content;
+  font-size: 14px;
+  color: lightslategrey;
+  box-shadow: 0 0 5px rgb(226, 226, 226);
+  max-width: 100%;
+  text-align: left;
+}
+
+#messages {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+
+input {
+  border: 0;
+  padding: 15px;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 90%;
+  width: 100%;
+  background-color: white;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+#input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  margin: 0 0 0 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.opt {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.opt:hover {
+  background-color: var(--accent-color);
 }
