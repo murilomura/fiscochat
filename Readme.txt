@@ -1,8 +1,4 @@
-FiscoChat
+# FiscoChat
+Chatbot da Reforma Tributária
 
-Thanks for downloading this template!
-
-Template Name: QuickStart
-Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Projeto Aplicado desenvolvido para fins de conclusão do curso de Arquitetura de Software e Soluções com IA.
