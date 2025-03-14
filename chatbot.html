@@ -61,27 +61,32 @@
     <!-- PGChat Section -->
     <section id="pgchat" class="pgchat section">
       <div class="pgchat-bg">
-        <img src="img/hero-bg-light.webp" alt="">
+        <!-- <img src="img/hero-bg-light.webp" alt=""> -->
       </div>
       <div class="container text-center">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-
-          <button id="init" i class="fa fa-refresh" onclick="initChat()">Simular Chatbot</button>
-
-          <div id="container2" class="container2">
-            <div id="chat" class="chat2">
-              <div id="messages" class="footers2"></div>
-              <input id="input" type="text" placeholder="Digite a sua dúvida tributária" autocomplete="off"
-                autofocus="true" />
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-6">
+            <div id="container2" class="container2">
+              <button id="cmdIniciar" class="fa fa-refresh" onclick="initChat()">Iniciar Assistente</button>
+              <div id="chat" class="chat2">
+                <div id="messages" class="footers2"></div>
+                <input id="txtNCM" type="hidden" placeholder="Digite o NCM do Produto" autocomplete="off" autofocus="true" />
+                <button id="bttcalcular" onclick="calcularTributacao()" hidden="true">Calcular</button>
+              </div>
             </div>
-
           </div>
-
+          <div class="col-lg-6">
+            <div id="container3" class="container2">
+              <div id="chat" class="chat2">
+                <div id="resultado" class="footers2"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
   </main>
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
